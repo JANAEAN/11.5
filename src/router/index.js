@@ -30,7 +30,12 @@ const routes = [
       {
         path:"home",
         name:"home",
-        component:()=>import("../views/main/home.vue")
+        component:()=>import("../views/main/home.vue"),
+        children:[{
+          path:"center",
+          name:"center",
+          component:()=>("../views/main/home/center.vue")
+        }]
       },
       {
         path:"idea",
